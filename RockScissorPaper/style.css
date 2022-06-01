@@ -1,0 +1,76 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url("background.jpg");
+}
+
+#enemyChoice {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-color: rgb(206, 109, 76);
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+#myChoice {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-color: rgb(206, 109, 76);
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+#Choices {
+    max-width: 250px;
+    max-height: 250px;
+    background-color: rgb(206, 109, 76);
+    margin-left: 630px;
+}
+
+#choices img {
+    width: 150px;
+    height: 150px;
+}
+
+#Paper {
+    border-left: 5px solid black;
+    max-width: 250px;
+}
+
+#Scissor {
+    border-left: 5px solid black;
+    max-width: 250px;
+}
+
+#enemyChoice {
+    filter: invert(1);
+    animation: appear 1s;
+}
+
+#enemyScore {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 70%;
+    display: inline-block;
+}
+
+#myScore {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 70%;
+    display: inline-block;
+}
+
+
+/*
+@keyframes appear {
+    to {
+        visibility: visible;
+    }
+}
+
+*/
