@@ -98,7 +98,7 @@ antwortenAbschiken.addEventListener("click", () => { // macht en listener wo lue
     if (aktuelleQuizz < quizFragen.length) { //macht wiiter bis uf 7 will 7 sind quizFragen.lentgh also wie viel fragen
         loadQuiz()
     } else {
-        quiz.innerHTML = `<h2> Du hast ${punkte}  // tuet das usgeh als "else" wenn alles fertig ish
+        quiz.innerHTML = `<h2> Du hast ${punkte}
         Fragen von 7 richtig beantwortet </h2>`
-    }
+    } // tuet das usgeh als "else" wenn alles fertig ish
 })
