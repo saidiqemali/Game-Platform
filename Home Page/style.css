@@ -50,8 +50,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: rgb(30, 194, 57);
+    background: rgb(4, 213, 255);
+    background: linear-gradient(90deg, rgba(4, 213, 255, 1) 26%, rgba(3, 147, 212, 1) 53%, rgba(68, 68, 218, 1) 78%, rgba(60, 51, 165, 0.6365896700477065) 96%);
 }
 
 li {
