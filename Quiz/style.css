@@ -15,7 +15,7 @@ body {
     box-shadow: rgb(8, 0, 255) 0px 30px 150px 10px;
     padding: 30px;
     width: 500px;
-    height: 300px;
+    height: 350px;
 }
 
 #enter {
@@ -32,5 +32,5 @@ ul {
 li {
     background: #9abbb5;
     padding: 8px;
-    border-radius: 11px;
+    border-radius: 10px;
 }
