@@ -60,6 +60,8 @@ function selectChoice() {
             break;
     }
 
+    console.log(enemy);
+
     document.getElementById("myScore").innerText = myScore;
     document.getElementById("enemyScore").innerText = enemyScore;
 }

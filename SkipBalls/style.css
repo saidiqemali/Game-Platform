@@ -1,0 +1,18 @@
+            .ball-cover {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%
+            }
+            
+            .ball {
+                position: relative;
+                top: 10px;
+                left: 10px;
+                height: 30px;
+                width: 30px;
+                background-color: #222;
+                border-radius: 50px;
+                transition: .05s ease-in-out
+            }

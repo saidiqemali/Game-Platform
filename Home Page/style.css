@@ -42,16 +42,15 @@ body {
     color: blanchedalmond;
     justify-content: center;
     display: flex;
-    margin: auto;
+    margin-top: 2vh;
 }
 
 ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: rgb(4, 213, 255);
-    background: linear-gradient(90deg, rgba(4, 213, 255, 1) 26%, rgba(3, 147, 212, 1) 53%, rgba(68, 68, 218, 1) 78%, rgba(60, 51, 165, 0.6365896700477065) 96%);
+    background: rgba(0, 0, 0, 0);
+    list-style: none;
 }
 
 li {
@@ -60,14 +59,14 @@ li {
 
 li a {
     display: block;
-    color: #666;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    background-color: #ddd;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 li a.active {
