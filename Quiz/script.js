@@ -49,6 +49,8 @@ const quizFragen = [{
     richtig: "2002",
 }, ]
 
+
+//das sind knöpf
 const quiz = document.getElementById("quiz")
 const antworten = document.querySelectorAll(".antwort")
 const fragen = document.getElementById("frage")
@@ -70,7 +72,7 @@ function loadQuiz() {
     const aktuelleQuizzquiFragen = quizFragen[aktuelleQuizz]
 
     fragen.innerText = aktuelleQuizzquiFragen.frage // mit inner text werden die fragen bearbeitet
-    ersteOption.innerText = aktuelleQuizzquiFragen.A // mit inner text werden die buchstaben A bearbeitet
+    ersteOption.innerText = aktuelleQuizzquiFragen.A // mit inner text werden die buchstaben A bearbeitet also text vom knopf ihgsetzt
     zweiteOption.innerText = aktuelleQuizzquiFragen.B // mit inner text werden die buchstaben A B bearbeitet
     dritteOption.innerText = aktuelleQuizzquiFragen.C // mit inner text werden die buchstaben C  bearbeitet
     vierteOption.innerText = aktuelleQuizzquiFragen.D // mit inner text werden die buchstaben D bearbeitet
@@ -93,7 +95,7 @@ antwortenAbschiken.addEventListener("click", () => { // macht en listener wo lue
         if (antwort.value == quizFragen[aktuelleQuizz].richtig) { // wenn die antwort richtig ist also wenn die variabele richtig mit dein er auwahl stimmt
             punkte++
         }
-        aktuelleQuizz += 1
+        aktuelleQuizz += 1 // gaht zum nächste wuiz
     }
     if (aktuelleQuizz < quizFragen.length) { //macht wiiter bis uf 7 will 7 sind quizFragen.lentgh also wie viel fragen
         loadQuiz()

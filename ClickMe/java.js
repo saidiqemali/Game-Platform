@@ -6,10 +6,10 @@ function moveElmRand(elm) {
 }
 
 //die variabl button
-var button = document.querySelector('#button');
+let button = document.querySelector('#button'); // button auswälen
 
 
-button.addEventListener('mouseenter', function(e) { moveElmRand(e.target); });
+button.addEventListener('mouseenter', function(e) { moveElmRand(e.target); }); // wenn mit button drüber gash, button verschiebe random
 
 //wenn geschafft hast clicken
 button.addEventListener('click', function(e) { alert('Gewonnen'); });
