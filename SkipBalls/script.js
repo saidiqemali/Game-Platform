@@ -1,10 +1,7 @@
-//nall mit mouse
-$('.ball-cover').on('mousemove', function() {
-    var x = event.clientX;
-    var y = event.clientY;
+document.onmousemove = function(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    document.getElementById('ball').style.marginLeft = x + "px";
+    document.getElementById('ball').style.marginTop = y + "px";
 
-    $('.ball').css({
-        top: y,
-        left: x
-    });
-})
+}
