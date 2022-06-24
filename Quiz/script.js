@@ -50,57 +50,62 @@ const quizFragen = [{
 }, ]
 
 
-//das sind knöpf
+//knopf
 const quiz = document.getElementById("quiz")
 const antworten = document.querySelectorAll(".antwort")
 const fragen = document.getElementById("frage")
-const ersteOption = document.getElementById("ersteOption") // elemente usehole vo html
+const ersteOption = document.getElementById("ersteOption")
 const zweiteOption = document.getElementById("zweiteOption")
 const dritteOption = document.getElementById("dritteOption")
 const vierteOption = document.getElementById("vierteOption")
-
 const antwortenAbschiken = document.getElementById("abschiken")
 
-let aktuelleQuizz = 0
-let punkte = 0
+
+let aktuelleQuizz = 0 // welche frage 1. 2. 3.
 
 
-loadQuiz()
 
-function loadQuiz() {
+function loadQuiz() { //  text vo jedem knopf bearbeiten, also text drauf machen
 
     const aktuelleQuizzquiFragen = quizFragen[aktuelleQuizz]
 
     fragen.innerText = aktuelleQuizzquiFragen.frage // mit inner text werden die fragen bearbeitet
     ersteOption.innerText = aktuelleQuizzquiFragen.A // mit inner text werden die buchstaben A bearbeitet also text vom knopf ihgsetzt
-    zweiteOption.innerText = aktuelleQuizzquiFragen.B // mit inner text werden die buchstaben A B bearbeitet
+    zweiteOption.innerText = aktuelleQuizzquiFragen.B // mit inner text werden die buchstaben B bearbeitet
     dritteOption.innerText = aktuelleQuizzquiFragen.C // mit inner text werden die buchstaben C  bearbeitet
     vierteOption.innerText = aktuelleQuizzquiFragen.D // mit inner text werden die buchstaben D bearbeitet
 }
+loadQuiz()
 
 function getAuswahl() {
     let antwort
 
-    antworten.forEach((antwort1) => { // luegt jedi antworte und luegt welli ugwählt worde ish
+    antworten.forEach((antwort1) => { // scahut jedi antwort und schaut ob die antwort mit der lösung stimmt
         if (antwort1.checked) {
             antwort = antwort1.id
         }
     })
     return antwort
 }
+
+let punkte = 0
+
 antwortenAbschiken.addEventListener("click", () => { // macht en listener wo luegt ob clickt worde ish
     const antwort = getAuswahl()
 
+
+    // richtige fragen
+
     if (antwort) {
-        if (antwort.value == quizFragen[aktuelleQuizz].richtig) { // wenn die antwort richtig ist also wenn die variabele richtig mit dein er auwahl stimmt
-            punkte++
+        if (antwort.value == quizFragen[aktuelleQuizz].richtig) { // wenn die antowrt mit der lösung stimmt, 1 punkt plus
+            punkte += 1
         }
         aktuelleQuizz += 1 // gaht zum nächste wuiz
     }
-    if (aktuelleQuizz < quizFragen.length) { //macht wiiter bis uf 7 will 7 sind quizFragen.lentgh also wie viel fragen
+    if (aktuelleQuizz < quizFragen.length) { //macht weiter bis auf 7 weil 7 sind quizFragen.lentgh also wie viel fragen
         loadQuiz()
     } else {
         quiz.innerHTML = `<h2> Du hast ${punkte}
         Fragen von 7 richtig beantwortet </h2>`
-    } // tuet das usgeh als "else" wenn alles fertig ish
+    }
 })

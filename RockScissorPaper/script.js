@@ -1,28 +1,31 @@
-let me; // mein id
-let myScore = 0;
-let enemy;
-let enemyScore = 0;
-
 var choices = ["Rock", "Paper", "Scissor"];
 
-window.onload = function() {
+window.onload = function() { // beim neuladen
         for (let i = 0; i < 3; i++) {
-            let choice = document.createElement("img"); // wenn mer ufs bild clickt denn wird das bild id liste vo dem array choices inetah und die wahl wird unter de varibalme me geschpeicheret
+            let choice = document.createElement("img");
             choice.id = choices[i];
-            choice.src = choices[i] + ".png";
-            choice.addEventListener("click", selectChoice);
+            choice.src = choices[i] + ".png"; //erstellt für schär stein papier 1 bild
+            choice.addEventListener("click", selectChoice); //wenn geclickt wird, wird die function selectChoice ausgführt
             document.getElementById("choices").append(choice);
         }
     } // 3 uswahl werden erstellt, mit bilder
 
 function selectChoice() {
-    debugger
+
+    let me; // mein id
     me = this.id;
     document.getElementById("myChoice").src = me + ".png";
 
+    let enemy;
     // gegner (computer) funktion random
     enemy = choices[Math.floor(Math.random() * 3)]; // gegner wöhlt automatisch scher stein paier ,,, mal 3 wills 3 sind (scher stei paier)
     document.getElementById("enemyChoice").src = enemy + ".png";
+
+
+
+
+    let myScore = 0;
+    let enemyScore = 0;
 
     // wer hat gewonnen
     switch (me) {
@@ -60,7 +63,6 @@ function selectChoice() {
             break;
     }
 
-    console.log(enemy);
 
     document.getElementById("myScore").innerText = myScore;
     document.getElementById("enemyScore").innerText = enemyScore;
